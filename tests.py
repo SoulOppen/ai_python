@@ -1,23 +1,8 @@
-from functions.get_files_info import get_files_info
+from functions.get_file_content import get_file_content
 
 def run_tests():
-    print("Running tests...\n")
-
-    print("Test 1: get_files_info('calculator', '.')")
-    print(get_files_info("calculator", "."))
-    print("\n---\n")
-
-    print("Test 2: get_files_info('calculator', 'pkg')")
-    print(get_files_info("calculator", "pkg"))
-    print("\n---\n")
-
-    print("Test 3: get_files_info('calculator', '/bin')")
-    print(get_files_info("calculator", "/bin"))
-    print("\n---\n")
-
-    print("Test 4: get_files_info('calculator', '../')")
-    print(get_files_info("calculator", "../"))
-    print("\n---\n")
-
+    print(get_file_content("calculator", "main.py"))
+    print(get_file_content("calculator", "pkg/calculator.py"))
+    print(get_file_content("calculator", "/bin/cat"))
 if __name__ == "__main__":
     run_tests()
